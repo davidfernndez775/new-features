@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
+import { TitleComponent } from '../../../shared/title/title.component';
 
 @Component({
   standalone: true,
-  imports: [],
-  templateUrl: './change-detection.component.html',
-  styles: ``
+  imports: [TitleComponent],
+  template: `<app-title title="Change Detection" />`,
 })
-export class ChangeDetectionComponent {
-
-}
+export class ChangeDetectionComponent {}
