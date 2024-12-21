@@ -6,9 +6,13 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `<section [ngClass]="['w-full', cssClass]">
-    <ng-content select="[selector]"></ng-content>
+    <ng-content />
   </section>`,
 })
 export class HeavyLoadersFastComponent {
   @Input({ required: true }) cssClass!: string;
+
+  constructor() {
+    console.log('Heavy Loader Fast creado');
+  }
 }
